@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="hero">
+    <h1>シンプル掲示板</h1>
+    <p class="muted">第1回：ダミーデータで一覧を表示しています（第2回でDBに差し替え）。</p>
+  </section>
+
+  <div class="grid">
+    {% for p in posts %}
+      <article class="card">
+        <h2 class="card-title">{{ p.title }}</h2>
+        <p class="meta">by {{ p.author_name }} / {{ p.created_at }}</p>
+        <p class="excerpt">{{ p.body }}</p>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock %}

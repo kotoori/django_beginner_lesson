@@ -1,0 +1,2 @@
+# django_beginner_lesson
+django入門オンライン講座
